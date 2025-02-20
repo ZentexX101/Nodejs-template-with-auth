@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
 
-const TestRoutes = require("../modules/test/test.routes");
+const authRoutes = require("../modules/auth/auth.routes");
 
 const moduleRoutes = [
 	{
-		path: "/test",
-		route: TestRoutes,
+		path: "/auth",
+		route: authRoutes,
 	},
 ];
 

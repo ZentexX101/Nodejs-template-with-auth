@@ -17,6 +17,7 @@ This backend template provides a robust foundation for building secure and scala
 - [Express.js](https://expressjs.com/) - Node.js framework
 - [MongoDB & Mongoose](https://mongoosejs.com/) - NoSQL database with an ORM for efficient data modeling and management.
 - [Bcrypt](https://www.npmjs.com/package/bcrypt) - Password hashing and salting
+- [Nodemailer](https://nodemailer.com/) - Email sending library
 - [JWT](https://jwt.io/) - Secure authentication and authorization for user management.
 - [dotenv](https://www.npmjs.com/package/dotenv) - Environment variables
 - [http status codes](https://www.npmjs.com/package/http-status-codes) - Standardized response status codes for API responses.
@@ -27,13 +28,13 @@ This backend template provides a robust foundation for building secure and scala
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/ZentexX101/Nodejs-template.git
+git clone https://github.com/ZentexX101/Nodejs-template-with-auth.git
 ```
 
 #### Go to the project directory
 
 ```bash
-cd .\Nodejs-template\
+cd .\Nodejs-template-with-auth\
 ```
 
 ### 2. Install the dependencies
@@ -59,11 +60,11 @@ npm start
 │-- config/          # Application configuration files (environment variables, DB settings)
 │-- middlewares/     # Express middlewares (Authentication, Logging, Error handling)
 │-- modules/         # Feature-based modules (Encapsulated routes, controllers, services, and models)
-│ ├── test/          # Example module
-│ │ ├── test.model.js  # Mongoose schema for Test
-│ │ ├── test.controller.js  # Handles HTTP requests & responses
-│ │ ├── test.services.js  # Business logic for Test
-│ │ ├── test.routes.js  # API endpoints for Test
+│ ├── auth/          # Example module
+│ │ ├── auth.model.js  # Mongoose schema for Auth
+│ │ ├── auth.controller.js  # Handles HTTP requests & responses
+│ │ ├── auth.services.js  # Business logic for Auth
+│ │ ├── auth.routes.js  # API endpoints for Auth
 │-- routes/ index.js    # API routes setup
 │-- utils/           # Helper functions (Validation, Formatting, Error handlers)
 

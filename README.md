@@ -1,4 +1,4 @@
-# Nodejs Template
+# Nodejs Template with Auth
 
 ## Overview
 

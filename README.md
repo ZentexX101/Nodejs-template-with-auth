@@ -114,29 +114,29 @@ package.json         # Dependencies & scripts
 
 ## 📁 /modules/ test (Modular Structure)
 
-This module follows the **modular monolithic** pattern, ensuring that all related functionalities for the `Test` feature are encapsulated within a single directory.  
+This module follows the **modular monolithic** pattern, ensuring that all related functionalities for the `Auth` feature are encapsulated within a single directory.  
 It contains its own **model, controller, services, and routes**, maintaining a clean and scalable architecture.
 
-#### 📄 **Files in the `test` Module**
+#### 📄 **Files in the `auth` Module**
 
-- **`test.model.js`**
+- **`auth.model.js`**
 
-  - Defines the Mongoose schema for `Test`.
-  - Manages the structure and validation of test-related data.
+  - Defines the Mongoose schema for `Auth`.
+  - Manages the structure and validation of auth-related data.
 
-- **`test.controller.js`**
+- **`auth.controller.js`**
 
   - Handles HTTP requests and responses.
   - Calls the service layer for business logic execution.
 
-- **`test.services.js`**
+- **`auth.services.js`**
 
-  - Implements core business logic for the `Test` module.
-  - Interacts with the `test.model.js` to process data operations.
+  - Implements core business logic for the `Auth` module.
+  - Interacts with the `auth.model.js` to process data operations.
 
-- **`test.routes.js`**
+- **`auth.routes.js`**
 
-  - Defines API endpoints for the `Test` module.
+  - Defines API endpoints for the `Auth` module.
   - Connects routes with the corresponding controller functions.
 
   <br>
@@ -153,17 +153,17 @@ It contains its own **model, controller, services, and routes**, maintaining a c
 - **`moduleRoutes`**
 
   - An array of objects, where each object contains:
-    - **`path`**: The base URL path for the module (e.g., `/test`).
-    - **`route`**: The imported route handler for the module (e.g., `TestRoutes`).
+    - **`path`**: The base URL path for the module (e.g., `/auth`).
+    - **`route`**: The imported route handler for the module (e.g., `authRoutes`).
 
 - **`router.use(route.path, route.route)`**
   - Registers the module routes on the Express router.
-  - For each entry in `moduleRoutes`, the route path (e.g., `/test`) is mapped to the corresponding route handler (`TestRoutes`).
+  - For each entry in `moduleRoutes`, the route path (e.g., `/auth`) is mapped to the corresponding route handler (`authRoutes`).
   - This allows for easily adding new modules and their routes by extending the `moduleRoutes` array.
 
 #### 📜 **Execution Flow**
 
-1. The `TestRoutes` for the `/test` path is registered under the main router.
+1. The `authRoutes` for the `/auth` path is registered under the main router.
 2. This router is used throughout the application for routing incoming requests to the appropriate module.
 
 <br>

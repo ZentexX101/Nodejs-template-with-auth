@@ -1,7 +1,7 @@
 const catchAsync = require("../../helper/utils/catchAsync");
 const sendResponse = require("../../helper/utils/sendResponse");
 const { StatusCodes } = require("http-status-codes");
-const userServices = require("./user.services");
+const userServices = require("./auth.services");
 
 const createUserHandler = catchAsync(async (req, res) => {
   const user = await userServices.createUser(req.body);

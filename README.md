@@ -179,15 +179,14 @@ It contains its own **model, controller, services, and routes**, maintaining a c
   - Applied to controller functions:
 
     ```javascript
-    const createTestHandler = catchAsync(async (req, res) => {
-    	const result = await testService.createTest(req.body);
-
-    	sendResponse(res, {
-    		statusCode: StatusCodes.CREATED,
-    		success: true,
-    		message: "Test created successfully",
-    		data: result,
-    	});
+    const createUserHandler = catchAsync(async (req, res) => {
+    const user = await userServices.createUser(req.body);
+    sendResponse(res, {
+    statusCode: StatusCodes.CREATED,
+    success: true,
+    message: "User created successfully",
+    data: user,
+      });
     });
     ```
 
@@ -204,10 +203,10 @@ It contains its own **model, controller, services, and routes**, maintaining a c
   - Applied to controller functions:
     ```javascript
     sendResponse(res, {
-    	statusCode: StatusCodes.CREATED,
-    	success: true,
-    	message: "Test created successfully",
-    	data: result,
+    statusCode: StatusCodes.CREATED,
+    success: true,
+    message: "User created successfully",
+    data: user,
     });
     ```
 
